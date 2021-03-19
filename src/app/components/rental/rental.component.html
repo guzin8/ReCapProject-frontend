@@ -1,0 +1,23 @@
+<div *ngIf = "dataLoaded ==false" class="spinner-border text-warning" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+<table class= "table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>BrandName</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>RentDate</th>
+            <th>ReturnDate</th>
+        </tr>
+    </thead>
+    <tr *ngFor ="let rental of rentals">
+        <td>{{rental.id}}</td>
+        <td>{{rental.brandName}}</td>
+        <td>{{rental.firstName}}</td>
+        <td>{{rental.lastName}}</td>
+        <td>{{rental.rentDate}}</td>
+        <td>{{rental.returnDate}}</td>
+    </tr>
+</table>
